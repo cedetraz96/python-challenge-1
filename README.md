@@ -1,1 +1,1 @@
-# ai-case-study
+# python-challenge-1
