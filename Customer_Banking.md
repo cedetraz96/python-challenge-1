@@ -1,40 +1,48 @@
-from savings_account import savings_account
-from cd_account import cd_account
+# Import the create_cd_account and create_savings_account functions
+from Account import Account
+from savings_account import create_savings_account
+from cd_account import create_cd_account
 
-def create_savings_account(balance, interest_rate, maturity):
-    
-    interest_earned = balance * interest_rate * maturity / 12
-    updated_balance = balance + interest_earned
-    return updated_balance, interest_earned
+# Define the main function
+def main():
+    """This function prompts the user to enter the savings and cd account balance, interest rate,
+    and the length of months to determine the interest gained.
+    It displays the interest earned on the savings and CD accounts and updates the balances.
+    """
+    # Prompt the user to set the savings balance, interest rate, and months for the savings account.
+    savings_balance = float(input("Enter the account balance: "))
+    savings_interest = float(input("Enter the account interest: "))
+    savings_maturity = int(input("Enter the account maturity in months: "))
+        
+    # Call the create_savings_account function and pass the variables from the user.
+updated_savings_balance, interest_earned = create_savings_account(savings_balance, savings_interest, savings_maturity)
 
-def user_input():
-   
-    balance = float(input(Enter the account balance: ))
-    interest_rate = float(input(Enter the account interest rate: ))
-    maturity = float(input(Enter the account maturity in months: ))
-    updated_balance, _ = create_savings_account(balance, interest_rate, maturity)
-    
-    print(fThe account balance after {maturity} months is {updated_balance}.)
-    return maturity
+def create_savings_account(balance, interest_rate, months): 
+    monthly_interest_rate = savings_balance * interest_rate / 12
+    total_interest = monthly_interest_rate * savings_maturity
+    updated_savings_balance = savings_balance + total_interest 
+    return updated_savings_balance, total_interest
 
-def calculate_updated_balance(balance, interest_rate, maturity):
-  
-    interest_earned = balance * interest_rate * maturity / 12
-    updated_balance = balance + interest_earned
-    return updated_balance, interest_earned
+    # Print out the interest earned and updated savings account balance with interest earned for the given months.
+    print(f"The account balance after {savings_maturity} months is {updated_balance: .2f}.")
 
-def print_results(updated_balance, maturity):
-    print(fThe account balance after {maturity} months is {updated_balance}.)
+    # Prompt the user to set the CD balance, interest rate, and months for the CD account.
+    cd_balance = float(input("Enter the CD balance: "))
+    cd_interest = float(input("Enter the CD interest rate: "))
+    cd_maturity = int(input("Enter the CD maturity in months: "))
 
-def format_currency(value):
-    return f
+    # Call the create_cd_account function and pass the variables from the user.
+    updated_cd_balance, interest_earned = create_cd_account(cd_balance, cd_interest, cd_maturity)
 
-if __name__ == __main__:
-    
-    savings_balance, savings_interest, savings_maturity = user_input()
-    updated_savings_balance, interest_earned_savings = calculate_updated_balance(savings_balance, savings_interest, savings_maturity)
-    print_results(updated_savings_balance, savings_maturity)
+def create_cd_account(balance, interest_rate, months):
+    monthly_interest_rate = cd_balance * interest_rate / 12
+    total_interest = monthly_interest_rate * cd_maturity
+    updated_cd_balance = cd_balance + total_interest
+    return updated_cd_balance, total_interest
 
-    cd_balance, cd_interest, cd_maturity = user_input()
-    updated_cd_balance, interest_earned_cd = calculate_updated_balance(cd_balance, cd_interest, cd_maturity)
-    print_results(updated_cd_balance, cd_maturity)
+    # Print out the interest earned and updated CD account balance with interest earned for the given months.
+    print(f"The account balance after {maturity} months is {updated_balance; .2f}.")
+
+if __name__ == "__main__":
+    # Call the main function.
+    main()
