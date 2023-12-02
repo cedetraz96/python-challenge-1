@@ -34,6 +34,7 @@ OpenAI.(2023).,GPT-3.  Retrieved 11/19/2023 from https://www.openai.com/
         "Prompt for user input"
         "Importing and using functions"
         "Change variables into functions"
+        "Set balance"
 
 Module 3 Activities
     "Car Loan Calculator"
@@ -42,3 +43,4 @@ Module 3 Activities
     "Banking Solution"
     "Accounts"
     "Account Inheritance"
+
