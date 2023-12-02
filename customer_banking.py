@@ -1,5 +1,5 @@
 def create_savings_account(balance, interest_rate, months):
-    # Add your implementation here
+
     pass
 
 def main():
@@ -21,7 +21,7 @@ def create_cd_account(balance, interest_rate, months):
     print(f"The account balance after {cd_maturity} months is ${updated_cd_balance:.2f}.")
 
 if __name__ == "__main__":
-    # Call the main function.
+  
     main()
 
 
